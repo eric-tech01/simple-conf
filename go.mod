@@ -1,4 +1,4 @@
-module github.com/eric-tech01/simple-conf.git
+module github.com/eric-tech01/simple-conf
 
 go 1.18
 
