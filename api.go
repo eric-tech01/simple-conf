@@ -2,8 +2,6 @@ package conf
 
 import (
 	"io"
-
-	"github.com/davecgh/go-spew/spew"
 )
 
 // Unmarshaller ...
@@ -45,11 +43,6 @@ func Reset() {
 // Traverse ...
 func Traverse(sep string) map[string]interface{} {
 	return defaultConfiguration.traverse(sep)
-}
-
-// Debug ...
-func Debug(sep string) {
-	spew.Dump("Debug", Traverse(sep))
 }
 
 // Get returns an interface. For a specific value use one of the Get____ methods.

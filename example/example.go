@@ -1,15 +1,22 @@
-package example
+package main
 
 import (
-	file_datasource "github.com/eric-tech01/datasource/file"
+	"fmt"
+
 	conf "github.com/eric-tech01/simple-conf"
+	file_datasource "github.com/eric-tech01/simple-conf/datasource/file"
 	toml "github.com/pelletier/go-toml"
 )
 
 func main() {
 
-	provider := file_datasource.NewDataSource("./config.toml")
-	if err := conf.Load(provider, toml.Unmarshal); err != nil {
+	provider, err := file_datasource.NewDataSource("./config.toml", false)
+	if err != nil {
 		panic(err)
 	}
+	if err := conf.LoadFromDataSource(provider, toml.Unmarshal); err != nil {
+		panic(err)
+	}
+	s := conf.GetString("simple.conf.default.name")
+	fmt.Printf("%s", s)
 }

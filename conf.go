@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/eric-tech01/util/xcast"
-	"github.com/eric-tech01/util/xmap"
+	"github.com/eric-tech01/simple-utils/xcast"
+	"github.com/eric-tech01/simple-utils/xmap"
 	"github.com/mitchellh/mapstructure"
 	"github.com/pkg/errors"
 	"github.com/spf13/cast"

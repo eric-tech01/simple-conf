@@ -15,7 +15,7 @@ if err := conf.Load(bytes.NewBufferString(content), toml.Unmarshal); err != nil 
 
 ```golang
 import (
-    file_datasource "github.com/eric-tech01/datasource/file"
+    file_datasource "github.com/eric-tech01/simple-file/datasource/file"
 )
 
 provider := file_datasource.NewDataSource(path)
