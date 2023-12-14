@@ -19,4 +19,7 @@ func main() {
 	}
 	s := conf.GetString("simple.conf.default.name")
 	fmt.Printf("%s", s)
+
+	conf.Set("simple.conf.default.age", 11)
+	fmt.Printf("\n %d", conf.GetInt("simple.conf.default.age"))
 }
